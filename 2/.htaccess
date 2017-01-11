@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^index-var1-([0-9A-z]*)\-var2-([0-9A-z]*)\-var3-([0-9A-z]*)\.html get.php?var1=$1&var2=$2&var3=$3 [L]
+
+Options -Indexes
+Options +FollowSymLinks
+DirectoryIndex index.php
